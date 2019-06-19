@@ -1,19 +1,21 @@
 const Checkout = require('../src/checkout');
 
-const catalogue = [
-  {
-    barcode: 123,
-    name: 'apple',
-  },
-  {
-    barcode: 456,
-    name: 'banana',
-  },
-];
-
 describe('checkout object', () => {
   let checkout;
+  let catalogue;
   beforeEach(() => {
+    catalogue = [
+      {
+        barcode: 123,
+        name: 'apple',
+        price: 1.00,
+      },
+      {
+        barcode: 456,
+        name: 'banana',
+        price: 0.50,
+      },
+    ];
     checkout = new Checkout(catalogue);
   });
   describe('object constructor', () => {
@@ -50,6 +52,12 @@ describe('checkout object', () => {
       const banana = catalogue[1];
       checkout.removeItem(catalogue[0]);
       expect(checkout.basket).toEqual([banana]);
+    });
+  });
+  describe('calculate total', () => {
+    it('calculates the basket total', () => {
+      checkout.basket = catalogue;
+      expect(checkout.calculateTotal()).toBe(1.5);
     });
   });
 });

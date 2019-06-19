@@ -15,6 +15,12 @@ Checkout.prototype = {
     const item = this.basket.indexOf(itemToRemove);
     this.basket.splice(item, 1);
   },
+  calculateTotal: function() {
+    const reducer = (accumulator, currentValue) => {
+      return accumulator + currentValue.price;
+    };
+    return this.basket.reduce(reducer, 0);
+  },
 };
 
 module.exports = Checkout;
