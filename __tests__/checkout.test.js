@@ -44,4 +44,12 @@ describe('checkout object', () => {
       expect(checkout.basket).toEqual([catalogue[0]]);
     });
   });
+  describe('remove from basket method', () => {
+    it('removes an item for the basket', () => {
+      checkout.basket = catalogue;
+      const banana = catalogue[1];
+      checkout.removeItem(catalogue[0]);
+      expect(checkout.basket).toEqual([banana]);
+    });
+  });
 });

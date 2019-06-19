@@ -11,6 +11,10 @@ Checkout.prototype = {
   addToBasket: function (item) {
     this.basket.push(item);
   },
+  removeItem: function (itemToRemove) {
+    const item = this.basket.indexOf(itemToRemove);
+    this.basket.splice(item, 1);
+  },
 };
 
 module.exports = Checkout;
