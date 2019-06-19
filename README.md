@@ -7,7 +7,7 @@ To re-create the [functional](https://github.com/MCRcodes/checkout-exercise-tdd-
 
 The checkout should have the following methods:
 
-- It should scan an item using a barcode and return item from catalogue.
+- It should scan a barcode and return an item from catalogue.
 - It should be able add an item to customer's shopping basket.
 - It should be able to remove items from the basket.
 - It should calculate the total of all items in the basket.
