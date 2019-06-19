@@ -1,0 +1,22 @@
+{
+  "name": "oop-checkout-challenge",
+  "version": "1.0.0",
+  "description": "object oriented checkout",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCRcodes/oop-checkout-challenge.git"
+  },
+  "author": "mcr codes june19",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MCRcodes/oop-checkout-challenge/issues"
+  },
+  "homepage": "https://github.com/MCRcodes/oop-checkout-challenge#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
